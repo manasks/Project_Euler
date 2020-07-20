@@ -1,22 +1,25 @@
 #/usr/bin/python
 
-DEBUG = 0
-SUM = 0
-number1 = 0
-number2 = 1
-temp = 0
+def problem2():
+    temp=0
+    while(temp < 4000000):
+        sum = 0
+        number1 = 0
+        number2 = 1
 
-while(temp < 4000000):
-    temp = number1 + number2
-    number1 = number2
-    number2 = temp
-    
-    print "fibonacci: ",temp
+        temp = number1 + number2
+        number1 = number2
+        number2 = temp
 
-    if temp%2:
-        continue
-    else:
-        print "temp: ",temp
-        SUM = SUM + temp
+        print("fibonacci: ",temp)
 
-print "TOTAL SUM: ", SUM
+        if temp%2:
+            continue
+        else:
+            print("temp: ",temp)
+            sum = sum + temp
+
+    print("TOTAL sum: ", sum)
+
+if __name__ == "__main__":
+    problem2()
