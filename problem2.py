@@ -1,25 +1,23 @@
 #/usr/bin/python
+import results
 
 def problem2():
     temp=0
+    number1 = 0
+    number2 = 1
+    sum = 0
     while(temp < 4000000):
-        sum = 0
-        number1 = 0
-        number2 = 1
-
         temp = number1 + number2
         number1 = number2
         number2 = temp
 
-        print("fibonacci: ",temp)
-
-        if temp%2:
+        if temp%2 != 0:
             continue
         else:
-            print("temp: ",temp)
             sum = sum + temp
 
-    print("TOTAL sum: ", sum)
+    return sum
 
 if __name__ == "__main__":
-    problem2()
+    if problem2() == results.result[2]:
+        print("Problem 2 successful")

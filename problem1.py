@@ -1,9 +1,11 @@
 #/usr/bin/python
+import results
+
 def problem1():
     DEBUG = None
     sum=0
     for number in range(1000):
-        if (number%3==0) and (number%5==0):
+        if (number%3==0) or (number%5==0):
             if DEBUG:
                 print("Number: ", number)
                 print("%3: ",number%3)
@@ -11,7 +13,8 @@ def problem1():
             sum = sum + number
         else:
             continue
-    print("TOTAL sum: ", sum)
+    return sum
 
 if __name__ == "__main__":
-    problem1()
+    if problem1() == results.result[1]:
+        print("Problem 1 successful")
