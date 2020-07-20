@@ -16,5 +16,8 @@ def problem1():
     return sum
 
 if __name__ == "__main__":
-    if problem1() == results.result[1]:
-        print("Problem 1 successful")
+    problem_result = problem1()
+    if problem_result == results.result[1]:
+        print("Problem successful. Output: {}".format(problem_result))
+    else:
+        print("Failed. Output: {}".format(problem_result))
